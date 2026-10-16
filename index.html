@@ -94,7 +94,7 @@
             
             // WebSocket 연결 (현재 접속 중인 웹페이지의 호스트 주소 자동 반영, 포트는 8080)
             const protocol = location.protocol === 'https:' ? 'wss://' : 'ws://';
-            const serverHost = location.hostname === 'localhost' ? 'localhost:8080' : `${location.hostname}:8080`;
+            const serverHost = location.hostname === 'localhost' ? 'https://happy369.onrender.com' : `${location.hostname}:8080`;
             ws = new WebSocket(`${protocol}${serverHost}`);
 
             ws.onopen = () => {
